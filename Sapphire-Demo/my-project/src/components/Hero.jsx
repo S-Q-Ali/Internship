@@ -1,34 +1,34 @@
-import banner1 from "../assets/banners/banner1.png";
-import banner2 from "../assets/banners/banner2.png";
-// import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
+import banner1 from "../assets/banners/Banner1.png";
+import banner2 from "../assets/banners/Banner2.png";
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
-var settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-};
+// var settings = {
+//   dots: true,
+//   infinite: true,
+//   speed: 500,
+//   slidesToShow: 1,
+//   slidesToScroll: 2,
+// };
 
 export default function Hero() {
-  // const banners = [banner1, banner2];
-  // const [currentSilde, setCurrentSlide] = useState(0);
-  // useEffect(() => {
-  //   const slideInterval = setInterval(() => {
-  //     setCurrentSlide((prevSlide) => (prevSlide + 1) % banners.length);
-  //   }, 5000);
-  //   return () => clearInterval(slideInterval);
-  // }, [banners.length]);
-  // const goToNext = () => { 
-  //   setCurrentSlide((prevSlide) => (prevSlide + 1) % banners.length);
-  // };
+  const banners = [banner1, banner2];
+  const [currentSilde, setCurrentSlide] = useState(0);
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % banners.length);
+    }, 6000);
+    return () => clearInterval(slideInterval);
+  }, [banners.length]);
+  const goToNext = () => { 
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % banners.length);
+  };
   return (
     <>
-    <div className="w-full">
+    {/* <div className="w-full">
       <div className="w-full overflow-hidden">
         <Slider {...settings}>
           {data.map((d)=>(
@@ -40,13 +40,13 @@ export default function Hero() {
           ))}
         </Slider>
       </div>
-    </div>
-      {/* <div className="relative w-full h-full overflow-hidden">
+    </div> */}
+      <div className="relative w-full h-full overflow-hidden">
         {
           <img
             src={banners[currentSilde]}
             alt="Banner"
-            className="w-full h-full object-cover transition-all duration-500"
+            className="w-full h-full cursor:pointer object-cover transition-all duration-1000 hover:scale-105 "
           />
         }
         <button
@@ -61,7 +61,7 @@ export default function Hero() {
         >
           <MdKeyboardArrowRight size={32} />
         </button>
-      </div> */}
+      </div>
     </>
   );
 }

@@ -24,9 +24,9 @@ export default function ShopbyCatagory() {
         <div>
           <Slider {...settings} >
             {data.map((d) => (
-              <div key={d.name} className="px-2">
+              <div key={d.name} >
                 <div className=" flex justify-center">
-                  <img src={d.img} alt="images" className="h-[360px] w-full object-cover cursor-pointer transition-all duration-400 hover:scale-110 " />
+                  <img src={d.img} alt="images" className="h-[360px] w-full object-cover cursor-pointer transition-all duration-400 hover:scale-110 border-0 rounded-2xl hover:rounded-2xl" />
                 </div>
                 <div className="text-center font-bold">{d.name}</div>
               </div>

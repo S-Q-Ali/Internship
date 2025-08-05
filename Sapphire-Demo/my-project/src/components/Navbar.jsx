@@ -8,21 +8,21 @@ export default function NavBar() {
   return (
     <nav className="bg-white relative z-50 shadow-md px-6 py-4 flex justify-between items-center">
       <div className="text-2xl font-bold">SAPPHIRE</div>
-      <div class="w-full max-w-sm min-w-[200px]">
-        <div class="relative">
+      <div className="w-full max-w-sm min-w-[200px]">
+        <div className="relative">
           <input
-            class="w-full bg-transparent placeholder:text-black text-sm border border-slate-200 rounded-md pl-3 pr-28 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+            className="w-full bg-transparent placeholder:text-black text-sm border border-slate-200 rounded-md pl-3 pr-28 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
             placeholder="FIND YOUR FAVOURITES"
           />
           <button
-            class="absolute top-1 right-1 flex items-center py-1 px-2.5  text-center text-sm text-black transition-all shadow-sm hover:shadow focus:shadow-none active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+            className="absolute top-1 right-1 flex items-center py-1 px-2.5 text-center hover:text-2xl duration-300 cursor-pointer text-sm text-black transition-all shadow-sm hover:shadow focus:shadow-none active:shadow-none  disabled:opacity-50 disabled:shadow-none"
             type="button"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              class="w-5 h-6 mr-2"
+              className="w-5 h-6 mr-2  "
             >
               <path
                 fill-rule="evenodd"
@@ -42,9 +42,9 @@ export default function NavBar() {
       </ul>
 
       <div className="flex items-center gap-4 bg-transparent">
-        <FiTruck  className=" text-xl hover:text-2xl rotate-y-180 cursor-pointer" />
-        <FaRegUser className="text-xl hover:text-2xl cursor-pointer" />
-        <MdOutlineShoppingBag className="text-2xl hover:text-3xl cursor-pointer" />
+        <FiTruck  className=" text-xl hover:text-2xl rotate-y-180 cursor-pointer transition-all duration-300" />
+        <FaRegUser className="text-xl hover:text-2xl cursor-pointer transition-all duration-300" />
+        <MdOutlineShoppingBag className="text-2xl hover:text-3xl cursor-pointer transition-all duration-300" />
       </div>
     </nav>
   );
